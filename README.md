@@ -9,7 +9,7 @@ It requires:
 - Knowledge of the command line.
 - An Apple computer, because this wasn't hipster enough already.
 
-Both of these requirements can be installed through Homebrew and Brew Cask.
+Both Pandoc and BasicTeX can be installed through Homebrew and Brew Cask.
 
 # TODO:
 - Create a LaTeX style which conforms to UNISA's requirements.
