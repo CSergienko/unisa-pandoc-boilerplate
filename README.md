@@ -8,6 +8,10 @@ It requires:
 
 Both of these requirements can be installed through Homebrew and Brew Cask.
 
+# TODO:
+- Create a LaTeX style which conforms to UNISA's requirements.
+- Flesh out the boilerplate with useful examples of functionality and Markdown syntax.
+
 # Fixing BasicTeX CLI on OSx El Capitan
 Add `export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin` to your `.zshrc` or `.bashrc`:
 
