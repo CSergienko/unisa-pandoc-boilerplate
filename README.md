@@ -12,7 +12,6 @@ It requires:
 Both Pandoc and BasicTeX can be installed through Homebrew and Brew Cask.
 
 # TODO:
-- Create a LaTeX style which conforms to UNISA's requirements.
 - Flesh out the boilerplate with useful examples of functionality and Markdown syntax.
 
 # Fixing BasicTeX CLI on OSx El Capitan
