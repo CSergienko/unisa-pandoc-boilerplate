@@ -13,6 +13,8 @@ Both Pandoc and BasicTeX can be installed through Homebrew and Brew Cask.
 # TODO:
 - Flesh out the boilerplate with useful examples of functionality and Markdown syntax.
 - Investigate viability of creating a UNISA specific .csl file for citations.
+- Figure out how to insert the declaration before the TOC
+- Figure out how to insert the self-assessment and other addendums after the sources consulted.
 
 # Fixing BasicTeX CLI on OSx El Capitan
 If you find that `pdflatex` does not exist in your terminal, add `export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin` to your `.zshrc` or `.bashrc`.
