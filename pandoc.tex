@@ -146,9 +146,63 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-%% Including my set of hacks
-\input{custom.tex}
+%% Reduced margins
+\usepackage[margin=1.2in]{geometry}
 
+%% Typography Defaults
+\setsansfont{Helvetica Neue}
+\setmainfont{Helvetica Neue}
+\setmonofont{Helvetica Neue}
+
+%% Heading Styles
+\usepackage[explicit]{titlesec}
+\titlespacing*{\section}
+    {0pt}{\baselineskip}{-5pt}
+\titlespacing*{\subsection}
+    {0pt}{\baselineskip}{-5pt}
+\titlespacing*{\subsubsection}
+    {0pt}{\baselineskip}{-5pt}
+\titleformat{\section}
+    {\bfseries}{\thesection}{1em}{\MakeUppercase{#1}}
+\titleformat{\subsection}
+    {\bfseries}{\thesubsection}{1em}{#1}
+\titleformat{\subsubsection}
+    {\bfseries}{\thesubsubsection}{1em}{\textit{#1}}
+
+%% Paragraph Styles
+\linespread{1.05} % a bit more vertical space
+\setlength{\parskip}{\baselineskip} % space between paragraphs spacing is one baseline unit
+
+
+%% Table of Contents Styles
+\usepackage{tocloft}
+\usepackage{textcase}
+
+% This makes top level sections in the TOC uppercase.
+\makeatletter
+\let\oldcontentsline\contentsline
+\def\contentsline#1#2{%
+  \expandafter\ifx\csname l@#1\endcsname\l@section
+    \expandafter\@firstoftwo
+  \else
+    \expandafter\@secondoftwo
+  \fi
+  {%
+    \oldcontentsline{#1}{\MakeTextUppercase{#2}}%
+  }{%
+    \oldcontentsline{#1}{#2}%
+  }%
+}
+\makeatother
+
+\cftsetindents{section}{0em}{3em}
+\cftsetindents{subsection}{0em}{3em}
+\cftsetindents{subsubsection}{0em}{3em}
+
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\cftsecfont}{\bfseries}                           %Typewriter sectionentries
+\renewcommand{\cftsubsecfont}{\bfseries}
+\renewcommand{\cftsubsubsecfont}{\bfseries \itshape}
 
 %% Main doc
 \begin{document}
@@ -163,13 +217,16 @@ $endif$
 
 $for(include-before)$
 $include-before$
-
 $endfor$
+
 $if(toc)$
 {
 \hypersetup{linkcolor=black}
 \setcounter{tocdepth}{$toc-depth$}
+\clearpage
 \tableofcontents
+\clearpage
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
 }
 $endif$
 $body$
