@@ -19,6 +19,6 @@ Both Pandoc and BasicTeX can be installed through Homebrew and Brew Cask.
 Add `export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin` to your `.zshrc` or `.bashrc`.
 
 # Building the Output
-For ease of use, there's a `gendoc.sh` file which contains all of the necessary flags to generate the PDF.
+For ease of use, there's a `gendoc.sh` bash script which runs Pandoc with all of the necessary flags to generate the PDF.
 
 Run `$ ./gendoc.sh` in the command line.
