@@ -8,6 +8,19 @@ csl: harvard-university-of-cape-town.csl
 toc-title: Table of Contents
 ---
 
+# Declaration {.unnumbered}
+I, the undersigned, hereby declare that this is my own and personal work, except where the work(s) or publications of others have been acknowledged by means of reference techniques.
+
+I have read and understood Tutorial Letter ###ALLE/302 regarding technical and presentational requirements, reference techniques and plagiarism.
+
+NAME  
+**ID Number:** ###
+**Student Number:** ###
+
+**Witness:** NAME  
+**ID Number:** ###  
+**Student Number:** ###
+
 \newpage
 # Section One
 

@@ -152,7 +152,7 @@ $endfor$
 %% Typography Defaults
 \setsansfont{Helvetica Neue}
 \setmainfont{Helvetica Neue}
-\setmonofont{Helvetica Neue}
+%\setmonofont{Helvetica Neue}
 
 %% Heading Styles
 \usepackage[explicit]{titlesec}
@@ -204,9 +204,7 @@ $endfor$
 \renewcommand{\cftsubsecfont}{\bfseries}
 \renewcommand{\cftsubsubsecfont}{\bfseries \itshape}
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
+\pagenumbering{arabic}
 %% Main doc
 \begin{document}
 $if(title)$
@@ -249,12 +247,11 @@ $endif$
 $endif$
 $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-
 $endif$
 $for(include-after)$
 $include-after$
 
 $endfor$
 
-\pagenumbering{arabic}
+
 \end{document}
